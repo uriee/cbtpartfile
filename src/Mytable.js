@@ -56,9 +56,9 @@ const TableComponent =createReactClass({
         <tr key={'tr' + ukey + i}>
           {dataColumns.map(function(column,j) {
             var content = row[column]
-            content = (column==='Details' ? content : hebflip(content))
+            content = (column==='Details' || column==='Link'  ? content : hebflip(content))
             content = (column==='Part Name' && content.indexOf('$')> 0 ? linkPart(content) : content)
-            var markup = (column != 'Part Name' ? <td key={'td' + ukey + i + j}  dangerouslySetInnerHTML={createMarkup(content)}></td> : <td key={'td' + ukey + i + j}>{content}</td>)
+            var markup = (column !== 'Part Name' ? <td key={'td' + ukey + i + j}  dangerouslySetInnerHTML={createMarkup(content)}></td> : <td key={'td' + ukey + i + j}>{content}</td>)
             return markup })}
         </tr>); });
 

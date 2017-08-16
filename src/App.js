@@ -13,7 +13,7 @@ class App extends Component {
           <h2>Welcome to CBT Part Data Viewer</h2>
         </div>
         <p className="App-intro">
-          Enter the part you need to review 
+          Enter the serial/part you need to review 
         </p>
         <Part />        
       </div>
